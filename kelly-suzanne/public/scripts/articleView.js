@@ -1,3 +1,4 @@
+
 'use strict';
 
 const articleView = {};
@@ -87,8 +88,8 @@ articleView.initNewArticlePage = () => {
   $('#new-form').on('submit', articleView.submit);
 };
 
-// COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// DONE COMMENT: When is this function called? What event ultimately triggers its execution?
+// RESPONSE: This function is called inside of initNewArticlePage, which is invoked at the bottom of new.html
 articleView.create = () => {
   let article;
   $('#articles').empty();
@@ -112,8 +113,8 @@ articleView.create = () => {
   $('#article-json').val(`${JSON.stringify(article)},`);
 };
 
-// COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// DONE COMMENT: When is this function called? What event ultimately triggers its execution?
+// RESPONSE: This function is called inside of initNewArticlePage, which is invoked at the bottom of new.html
 articleView.submit = event => {
   event.preventDefault();
   let article = new Article({
@@ -125,8 +126,8 @@ articleView.submit = event => {
     publishedOn: $('#article-published:checked').length ? new Date() : null
   });
 
-  // COMMENT: Where is this function defined? When is this function called? What event ultimately triggers its execution?
-  // PUT YOUR RESPONSE HERE
+  //DONE COMMENT: Where is this function defined? When is this function called? What event ultimately triggers its execution?
+  //RESPONSE: This function is defined at the bottom of article.js. It is executed when a new article is submitted.
   article.insertRecord();
 }
 
