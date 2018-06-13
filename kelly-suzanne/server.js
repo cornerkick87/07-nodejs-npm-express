@@ -24,4 +24,9 @@ app.post('/articles', (request, response) => {
   response.status(201).json(request.body);
 })
 
+app.use((request, response) => {
+  console.log('oh noes a 404!!!!!');
+  response.send('<h1>404 page not found</h2>');
+})
+
 app.listen(PORT, () => console.log(`server is listening on port ${PORT}`));
