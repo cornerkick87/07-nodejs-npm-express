@@ -47,6 +47,7 @@ Article.fetchAll = () => {
 Article.prototype.insertRecord = function (callback) {
   $.post('/articles', { author: this.author, authorUrl: this.authorUrl, body: this.body, category: this.category, publishedOn: this.publishedOn, title: this.title })
     .then(data => {
+      //MOD*
       console.log(data);
 
       //Done COMMENT: What is the purpose of this line? Is the callback invoked when this method is called? Why or why not?
