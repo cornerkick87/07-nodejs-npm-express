@@ -1,0 +1,30 @@
+{
+  "name": "kelly-suzanne",
+  "version": "1.0.0",
+  "description": "building a server for the blog",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cornerkick87/07-nodejs-npm-express.git"
+  },
+  "keywords": [
+    "server",
+    "blog",
+    "kilovolt",
+    "brook",
+    "riggio"
+  ],
+  "author": "kelly william bennett and suzanne leber",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cornerkick87/07-nodejs-npm-express/issues"
+  },
+  "homepage": "https://github.com/cornerkick87/07-nodejs-npm-express#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
