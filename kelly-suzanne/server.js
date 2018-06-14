@@ -22,11 +22,12 @@ app.post('/articles', (request, response) => {
   // REVIEW: This route will receive a new article from the form page, new.html, and log that form data to the console. We will wire this up soon to actually write a record to our persistence layer!
   console.log(request.body);
   response.status(201).json(request.body);
-})
+});
+
 //fix//
 app.use((request, response) => {
-  res.status(404).send('404 page not found');
+  response.status(404).send('404 page not found');
   console.log('oh noes a 404!!!!!');
-}
+});
 
 app.listen(PORT, () => console.log(`server is listening on port ${PORT}`));
